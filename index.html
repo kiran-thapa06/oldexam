@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <style>
+        /* Add this CSS for the Exam Tips button */
+        .exam-tips-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: navy;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .exam-tips-button:hover {
+            background: linear-gradient(135deg, #ffa500, #ff6b6b);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        .exam-tips-button:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Your Navigation (Unchanged) -->
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="index.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </span>
+                    <span class="text">About us</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                    </span>
+                    <span class="text">Contact</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+
+    <!-- Your Navigation Script (Unchanged) -->
+    <script>
+        const list = document.querySelectorAll('.list');
+        function active(){
+            list.forEach((item) => item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) => item.addEventListener('mouseenter', active));
+    </script>
+
+    <!-- Shadow Container -->
+    <div class="shadow-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
+        <div class="shadow-text">"Shine bright, answer right. You’re ready for this!"</div>
+    </div>
+
+    <!-- Home Section -->
+    <div id="homesection" class="home-section" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
+        <div class="text-content">
+            <h1>Welcome to the Past!</h1>
+            <p>We’re excited to have you here as you take the next step toward academic success. 
+                Our platform is designed to help students like you access past exam questions tailored to your university. 
+                <br>Simply choose your institution, enter your pass key, and unlock a wealth of resources to help you prepare effectively. We’ve made it easy for you to study smarter and boost your confidence for upcoming exams. Wishing you all the best as you work toward your goals you’ve got this! Let’s make your academic journey a successful one.
+            </p>
+        </div>
+        
+        <!-- Kids with Book Image -->
+        <div class="image-boxx" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
+            <img src="image/kidswithBBook.jpg" alt="Kids with BB Book">
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="features-heading">Why Choose Us?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <ion-icon name="library-outline" class="feature-icon"></ion-icon>
+                <h3 class="feature-title">Extensive Question Bank</h3>
+                <p class="feature-description">Access thousands of past exam questions from top institutions.</p>
+            </div>
+            <div class="feature-card">
+                <ion-icon name="lock-closed-outline" class="feature-icon"></ion-icon>
+                <h3 class="feature-title">Secure Access</h3>
+                <p class="feature-description">Your data is safe with our secure login system.</p>
+            </div>
+            <div class="feature-card">
+                <ion-icon name="school-outline" class="feature-icon"></ion-icon>
+                <h3 class="feature-title">Tailored Resources</h3>
+                <p class="feature-description">Get resources specific to your school or university.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- College Selection Section -->
+        <div class="image-college" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+            <div class="text-container">
+                <div class="content-container">
+                    <h2 class="cursive-heading">Select your <span class="highlight">COLLEGES</span></h2>
+                    <div class="search-container">
+                        <input type="text" id="collegeSearch" placeholder="Search for your college..." />
+                        <button id="goBackButton" style="display: none;">Go Back</button>
+                    </div>
+                    <div id="searchResult"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- College Grid -->
+        <div class="image-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+            <figure class="image-box" data-college="HAW">
+                <img src="\image\uni.png" class="clickable-image" data-id="1" alt="HAW">
+                <figcaption>HAW</figcaption>
+            </figure>
+            <figure class="image-box" data-college="Hamburg university">
+                <img src="\image\uni.png" class="clickable-image" data-id="2" alt="Hamburg university">
+                <figcaption>Hamburg university</figcaption>
+            </figure>
+            <figure class="image-box" data-college="Berlin university">
+                <img src="\image\uni.png" class="clickable-image" data-id="3" alt="Berlin university">
+                <figcaption>Berlin university</figcaption>
+            </figure>
+            <figure class="image-box" data-college="Laligurans school">
+                <img src="\image\uni.png" class="clickable-image" data-id="4" alt="Laligurans school">
+                <figcaption>Laligurans school</figcaption>
+            </figure>
+            <figure class="image-box" data-college="Satyawati secondary school">
+                <img src="\image\uni.png" class="clickable-image" data-id="5" alt="Satyawati secondary school">
+                <figcaption>Satyawati secondary school</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Hidden Login Block -->
+    <div class="login-block" id="loginBlock">
+        <h2>Login</h2>
+        <p>Select your role:</p>
+        <button class="role-btn" onclick="authenticate('student')">👨‍🎓 Student Login</button>
+        <button class="role-btn" onclick="authenticate('teacher')">👨‍🏫 Teacher Login</button>
+        <input type="password" id="passKey" placeholder="Enter pass key">
+        <button onclick="validatePass()">Submit</button>
+        <button class="close-btn" onclick="closeLogin()">Close</button>
+        <p id="errorMsg"></p>
+    </div>
+
+    <!-- Exam Tips Button -->
+    <button class="exam-tips-button" onclick="window.location.href='examtips.html'">Exam Tips Click Here</button>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Extra Script for Images and Login Block -->
+    <script src="script.js"></script>
+</body>
+</html>
